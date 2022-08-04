@@ -108,7 +108,7 @@ class OrderController extends Controller
 
             ];
             //Mail::to($orderApproval->lecturer['email'])->send(new OrderMail($msgForLecture));
-            Mail::to("e18115@eng.pdn.ac.lk")->send(new OrderMail($msgForLecture));
+            Mail::to("e18168@eng.pdn.ac.lk")->send(new OrderMail($msgForLecture));
 
             $msgForStudent = [
                 "title" => "Your Order Request From CE Smart Inventory",
@@ -119,7 +119,7 @@ class OrderController extends Controller
                 "components" => $order->componentItems
             ];
             //Mail::to($order->user->email)->send(new OrderMail($msgForStudent));
-            Mail::to("e18115@eng.pdn.ac.lk")->send(new OrderMail($msgForStudent));
+            Mail::to("e18168@eng.pdn.ac.lk")->send(new OrderMail($msgForStudent));
             
             return redirect()->route('frontend.user.products')->with('success', 'Order Request mail has been sent sucessfully.');
             

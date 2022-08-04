@@ -298,7 +298,7 @@ class OrderController extends Controller
                 "components" => $orderRequest->componentItems
             ];
             //Mail::to($orderRequest->user->email)->send(new OrderMail($details));
-            Mail::to("e18115@eng.pdn.ac.lk")->send(new OrderMail($details));
+            Mail::to("e18168@eng.pdn.ac.lk")->send(new OrderMail($details));
 
             return redirect()->route('admin.orders.officer.approved.index')->with('Success', 'Email has been sent!');
 
@@ -335,7 +335,7 @@ class OrderController extends Controller
                 "components" => $orderRequest->componentItems
             ];
             //Mail::to($orderRequest->user->email)->send(new OrderMail($details));
-            Mail::to("e18115@eng.pdn.ac.lk")->send(new OrderMail($details));
+            Mail::to("e18168@eng.pdn.ac.lk")->send(new OrderMail($details));
 
             return redirect()->route('admin.orders.officer.ready.index')->with('Success', 'Email has been sent!');
 
@@ -371,7 +371,7 @@ class OrderController extends Controller
                 "components" => $orderRequest->componentItems
             ];
             //Mail::to($orderRequest->user->email)->send(new OrderMail($details));
-            Mail::to("e18115@eng.pdn.ac.lk")->send(new OrderMail($details));
+            Mail::to("e18168@eng.pdn.ac.lk")->send(new OrderMail($details));
 
             return redirect()->route('admin.orders.officer.picked.index')->with('Success', 'Email has been sent!');
 
@@ -403,7 +403,7 @@ class OrderController extends Controller
                 "components" => $order->componentItems
             ];
             //Mail::to($order->HOD->email)->send(new OrderMail($details));
-            Mail::to("e18115@eng.pdn.ac.lk")->send(new OrderMail($details));
+            Mail::to("e18168@eng.pdn.ac.lk")->send(new OrderMail($details));
             
             return redirect()->route('admin.orders.lecturer.index')->with('success', 'you have approved the order.you can view the order in accepted order list.');
 
@@ -432,7 +432,7 @@ class OrderController extends Controller
             
             ];
             //Mail::to($order->user->email)->send(new OrderMail($details));
-            Mail::to("e18115@eng.pdn.ac.lk")->send(new OrderMail($details));
+            Mail::to("e18168@eng.pdn.ac.lk")->send(new OrderMail($details));
 
             return redirect()->route('admin.orders.lecturer.index')->with('success', 'you have rejected the order.you can view the order in rejected order list.');
             
@@ -495,7 +495,7 @@ class OrderController extends Controller
             ];
 
             //Mail::to($order->user->email)->send(new OrderMail($details));
-            Mail::to("e18115@eng.pdn.ac.lk")->send(new OrderMail($msgForStudent));
+            Mail::to("e18168@eng.pdn.ac.lk")->send(new OrderMail($msgForStudent));
 
             $msgForOfficer = [
                 "title" => "New Order Request From CE Smart Inventory",
@@ -511,7 +511,7 @@ class OrderController extends Controller
             // foreach ($officers as $officer) {
             //     Mail::to($officer->email)->send(new OrderMail($msgForOfficer));
             // }
-            Mail::to("e18115@eng.pdn.ac.lk")->send(new OrderMail($msgForOfficer));
+            Mail::to("e18168@eng.pdn.ac.lk")->send(new OrderMail($msgForOfficer));
 
             return redirect()->route('admin.orders.h_o_d.index')->with('success', 'you have approved the order. you can view the order in accepted order list.');
             
@@ -543,7 +543,7 @@ class OrderController extends Controller
             ];
             
             //Mail::to($order->user->email)->send(new OrderMail($details));
-            Mail::to("e18115@eng.pdn.ac.lk")->send(new OrderMail($details));
+            Mail::to("e18168@eng.pdn.ac.lk")->send(new OrderMail($details));
 
             return redirect()->route('admin.orders.h_o_d.index')->with('success', 'you have rejected the order.you can view the order in rejected order list.');
             
